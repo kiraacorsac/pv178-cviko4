@@ -3,90 +3,78 @@ using System.Collections.Generic;
 
 namespace ExtensionMethods
 {
+
+
+
     public static class Utils
     {
-        public static void PrintRepeatedly(/* TODO - add parameter */)
-        {
-            const int repetitionCount = 3;
-            const string content = " <-> ";
-            Console.WriteLine($"Following content:{content}will be printed repeatedly ({repetitionCount}x times):");
+        private static Random random = new Random();
 
-            // TODO - Ivoke delegate passed as parameter...
-            // ...
-            
-            Console.WriteLine(Environment.NewLine);
-            Console.ReadKey();
-        }
-
-        public static void CheckPalindromes(/* TODO - add parameter */)
+        /// <summary>
+        /// Algoritmus triedi cisla metodou quicksort.Merie delegata ktory sa stara o logovanie
+        /// </summary>
+        /// <param name="numbersToSort">Vstupna sekvencia</param>
+        /// <param name="start">prvy index triedenej postupnosti</param>
+        /// <param name="end">posledny index triedenej postupnosti</param>
+        public static void QuickSort(int[] numbersToSort, int start, int end /*TODO */)
         {
-            var palindromes = new List<string>();
-            var words = new[]
+            if (start >= end)
             {
-                "civic",
-                "disco",
-                "level",
-                "numb",
-                "racecar",
-                "rear",
-                "redder",
-            };
-            Console.WriteLine("Given words:");
-            foreach (var word in words)
-            {
-                Console.Write($"{word}, ");
+                return;
             }
 
-            foreach (var word in words)
-            {
-                // TODO - Ivoke delegate passed as parameter...
-                // var isPalindrome = ...
+            int randomIndex = random.Next(start, end);
+            int pivot = numbersToSort[randomIndex];
 
-                if (isPalindrome)
+            //TODO vypis do konzoly uprostred algoritmu je nevhodny pridajte funkcii optional parameter delegat "logAction" ktory sa postara o vypis. 
+            //TODO: Delegat spracuje parametre randomIndex, pivot
+            Console.WriteLine($"Pivot is on position {randomIndex} element: {pivot}");
+
+            int i = start, j = end;
+
+            while (i < j)
+            {
+                while (i < j && numbersToSort[j] > pivot)
                 {
-                    palindromes.Add(word);
+                    j--;
                 }
+
+                numbersToSort[i] = numbersToSort[j];
+
+                while (i < j && numbersToSort[i] < pivot)
+                {
+                    i++;
+                }
+
+                numbersToSort[j] = numbersToSort[i];
             }
 
-            Console.WriteLine(Environment.NewLine + "Palindromes:");
-            foreach (var palindrome in palindromes)
-            {
-                Console.Write($"{palindrome}, ");
-            }
-            Console.WriteLine(Environment.NewLine);
-            Console.ReadKey();
-        }
-
-        public static void PrintGreaterThanLimit(/* TODO - add parameter */)
-        {
-            const int limit = 15;
-            var numbers = new[] { 0, 1, 3, 12, 8, 7, 43, 18, 93, 26, 57 };
-            Console.WriteLine("Given numbers:");
-            foreach (var number in numbers)
-            {
-                Console.Write($"{number}, ");
-            }
-
-            // TODO - Ivoke delegate passed as parameter...
-            // var filteredNumbers = ...
-
-            Console.WriteLine(Environment.NewLine + $"Numbers greater than {limit}:");
-            foreach (var number in filteredNumbers)
-            {
-                Console.Write($"{number}, ");
-            }
-            Console.WriteLine(Environment.NewLine);
-            Console.ReadKey();
+            numbersToSort[i] = pivot;
+            QuickSort(numbersToSort, start, i - 1 /*TODO*/);
+            QuickSort(numbersToSort, i + 1, end /*TODO*/);
         }
 
         /// <summary>
         /// Rozsiruje IEnumerable
-        /// Vykona akciu na kazdom elenete IEnumerable
+        /// Vykona akciu na kazdom elenete IEnumerable elementov typu T
         /// </summary>
         /// <typeparam name="T">Typ elementu kolekcie</typeparam>
         /// <param name="collection">Kolekcia IEnumerable</param>
         /// <param name="action">Akcia ktora sa ma vykonat pre kazdy element kolekcie</param>
         public static void ForEach</*TODO*/>( /*TODO parametre*/)
+        {
+            //TODO
+        }
+
+        /// <summary>
+        /// Rozsiruje IEnumerable
+        /// Vyfiltruje elementy kolekcie podla zadanej podmienky
+        /// </summary>
+        /// <typeparam name="T">Typ elementu kolekcie</typeparam>
+        /// <param name="collection">Kolekcia IEnumerable</param>
+        /// <param name="condition">Podmienka ktoru musia vysledne elementy splnat (Func)</param>
+        /// <returns>Kolekcia prvkou ktore splnaju zadanu podmienku</returns>
+        public static IEnumerable<T> Where</*TODO*/>( /*TODO parametre*/)
         {
             //TODO
         }

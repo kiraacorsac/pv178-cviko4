@@ -26,6 +26,7 @@ namespace ExtensionMethods
         /// <returns>Vysledny retazec ktori vznikol spojenim retazcov v kolekcii</returns>
         public static string StringJoin</*TODO*/>(/* TODO - add parameters */)
         {
+            string.Join()
             //TODO
             //...
         }
@@ -38,6 +39,7 @@ namespace ExtensionMethods
         /// <returns></returns>
         public static int CountWordsWithinLine(/* TODO - add parameters */)
         {
+            line
             // TODO
             // ...
         }
@@ -52,6 +54,7 @@ namespace ExtensionMethods
         /// <returns>vrati pocet vyskytu daneho prvku v kolekci</returns>
         public static int CountOccurancesOfElement<T>(/* TODO - add parameters */)
         {
+            
             // TODO
             // ...
         }

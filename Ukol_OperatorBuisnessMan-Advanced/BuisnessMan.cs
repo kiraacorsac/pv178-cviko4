@@ -20,6 +20,10 @@ namespace Ukol_OperatorBuisnessMan_Advanced
             return thisValue.CompareTo(otherValue);
         }
 
+        public static string operator *(BuisnessMan a, BuisnessMan b)
+        {
+            return "";
+        }
 
         //implementujte operátory <, >
         //implementujte operátory <=, >= (bez použitia CompareTo)

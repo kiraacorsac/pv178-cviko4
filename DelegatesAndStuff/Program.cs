@@ -22,86 +22,28 @@ namespace DelegatesAndStuff
     {
         static void Main(string[] args)
         {
-            TestPrintRepeatedly();
+            //Protyp: pouzivajte lambda funkcie je to rychlejsie a krajsie
 
-            TestCheckPalindrome();
+            var numbersToSort = new[] { 0, 1, 3, 12, 8, 7, 43, 18, 93, 26, 57 };
 
-            TestPrintGreaterThan();
+            //TODO pridajte do funkcie QuickSort delegata ktory vypise parametre na konzolu
+            Utils.QuickSort(numbersToSort, 0, numbersToSort.Length);
+            Console.WriteLine(string.Join(",", numbersToSort));
+            Console.ReadKey();
 
             //TODO: Vypiste kazdy prvok na novy riadok konzoly
             List<string> collection = new List<string> { "these", "are", "some", "elements" };
             //collection.ForEach(... );
+            Console.ReadKey();
+
+            var numbersToFilter = new[] { 0, 1, 3, 12, 8, 7, 43, 18, 93, 26, 57 };
+            //TODO - pomocou naimplementovanej funkcie where a foreach vypiste na konzolu len cisla > 15 
+            Console.ReadKey();
 
             //TODO: Odkomentujte v pripade bonusu
             //var upper = "This is argument".Apply( s => s.ToUpper() );
             //Console.WriteLine(upper);
-        }
-
-
-        private static void TestPrintRepeatedly()
-        {
-            /* 
-            Zde vytvorte generickeho delegata (Action<...>)
-            do ktereho vlozite lambda vyraz, ktery:
-            
-            - opakovane vypisuje dany retezec do konzole
-
-            - bude mit parametr typu string: retezec, ktery 
-              se bude opakovane tisknout na vystup
-            
-            -  bude mit parametr typu int: udava, kolikrat se
-               ma dany retezec vytisknout
-
-            na zaver odkomentujte nize uvedene volani...
-            */
-            // TODO ...
-
-            //Utils.PrintRepeatedly(printRepeatedlyAction);
-        }
-
-        private static void TestCheckPalindrome()
-        {
-            /* 
-            Zde vytvorte generickeho delegata (Func<...>)
-            do ktereho vlozite lambda vyraz, ktery:
-
-            - kontroluje vyskyt palindromu v danem retezci
-            
-            - bude mit parametr typu string: retezec, v ramci
-              ktereho se bude kontrolovat vyskyt palindromu
-            
-            -  navratovy typ (bool) udava, zda retezec obsahuje
-               palindrom
-
-            na zaver odkomentujte nize uvedene volani...
-            */
-            // TODO ...
-
-            //Utils.CheckPalindromes(isPalindrome);
-        }
-
-        private static void TestPrintGreaterThan()
-        {
-            /* 
-            Zde vytvorte generickeho delegata (Func<...>)
-            do ktereho vlozite lambda vyraz, ktery:
-
-            - vybira hodnoty vetsi nez zadane mez z dane kolekce
-            
-            - bude mit parametr typu IEnumerable<int>: kolekce,
-              v ramci ktere se budou filtrovat hodnoty
-
-             - bude mit parametr typu int: spodni mez (z kolekce
-               se budou vybirat hodnoty vetsi nez tato spodni mez)
-            
-            -  navratovy typ (IEnumerable<int>) cisla vetsi nez
-               spodni mez
-
-            na zaver odkomentujte nize uvedene volani...
-            */
-            // TODO ...
-
-            //Utils.PrintGreaterThanLimit(getGreaterThan);
+            //Console.ReadKey();
         }
     }
 }
