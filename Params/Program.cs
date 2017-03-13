@@ -17,7 +17,6 @@ namespace Params
         static void Main(string[] args)
         {
             TestFirstMethod();
-            TestSecondMethod();
         }
 
         private static void TestFirstMethod()
@@ -37,21 +36,6 @@ namespace Params
             Logger.WriteLogsWithDescription("General message:", true, logTimes);
 
             Console.WriteLine("\nPress any key to continue with solution test...\n");
-            Console.ReadKey();
-        }
-
-        private static void TestSecondMethod()
-        {
-            // prepare test data, note that type of the array does not have to be specified
-            var logTimes = new[]
-            {
-                new EventLog("Fatal error in AppCore.dll..." , DateTime.Now.AddMinutes(-15)),
-                new EventLog("An unexpected AggregateException occurred in user code...", DateTime.Now.AddSeconds(-120)),
-                new EventLog("File: 'invoice.xml' has been successfully exported", DateTime.Now.AddHours(-2)),
-            };
-
-            Logger.WriteLogsWithDescription(false, logTimes);
-
             Console.ReadKey();
         }
     }

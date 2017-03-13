@@ -4,6 +4,8 @@ namespace ExtensionMethods
 {
     public static class ExtensionMethods
     {
+        //Vyberte si 3 funkcie a implementujte (kto stihne aj vsetky)
+
         /// <summary>
         /// vrati prvni 4 znaky daneho retezce (pokud ma delku > 4)
         /// </summary>
@@ -13,6 +15,19 @@ namespace ExtensionMethods
         {
             // TODO
             // ...
+        }
+
+        /// <summary>
+        /// Funkcia rozsiruje kolekciu stringov
+        /// </summary>
+        /// <typeparam name="T">Typ prvku kolekcie.</typeparam>
+        /// <param name="strings">IEnumerable stringov ktore chceme spojit don vysledneho retazca.</param>
+        /// <param name="separator">Oddelovac (string) ktorim budu jednotlive polozky kolekcie oddelene</param>
+        /// <returns>Vysledny retazec ktori vznikol spojenim retazcov v kolekcii</returns>
+        public static string StringJoin</*TODO*/>(/* TODO - add parameters */)
+        {
+            //TODO
+            //...
         }
 
 

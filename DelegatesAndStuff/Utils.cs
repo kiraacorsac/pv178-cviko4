@@ -13,7 +13,7 @@ namespace ExtensionMethods
 
             // TODO - Ivoke delegate passed as parameter...
             // ...
-
+            
             Console.WriteLine(Environment.NewLine);
             Console.ReadKey();
         }
@@ -77,6 +77,33 @@ namespace ExtensionMethods
             }
             Console.WriteLine(Environment.NewLine);
             Console.ReadKey();
+        }
+
+        /// <summary>
+        /// Rozsiruje IEnumerable
+        /// Vykona akciu na kazdom elenete IEnumerable
+        /// </summary>
+        /// <typeparam name="T">Typ elementu kolekcie</typeparam>
+        /// <param name="collection">Kolekcia IEnumerable</param>
+        /// <param name="action">Akcia ktora sa ma vykonat pre kazdy element kolekcie</param>
+        public static void ForEach</*TODO*/>( /*TODO parametre*/)
+        {
+            //TODO
+        }
+
+        /// <summary>
+        /// Bonus:
+        /// Aplikuje outerFunction: outer(a) na a. funguje ako operator "po" v matematike f(g()) = g() po f().
+        /// </summary>
+        /// <typeparam name="TTarget">Typ argumentu vonkajsej funkcie</typeparam>
+        /// <typeparam name="TResult">Typ vysledku vonkajsej funkcie</typeparam>
+        /// <param name="target">ciel na ktoru chceme funkciu aplikovat</param>
+        /// <param name="outerFunction">Funkcia ktoru chceme aplikovat</param>
+        /// <returns></returns>
+        public static TResult Apply<TTarget, TResult>( /*TODO parameters*/)
+        {
+            //TODO
+            throw new NotImplementedException();
         }
     }
 }

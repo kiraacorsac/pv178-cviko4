@@ -27,6 +27,14 @@ namespace DelegatesAndStuff
             TestCheckPalindrome();
 
             TestPrintGreaterThan();
+
+            //TODO: Vypiste kazdy prvok na novy riadok konzoly
+            List<string> collection = new List<string> { "these", "are", "some", "elements" };
+            //collection.ForEach(... );
+
+            //TODO: Odkomentujte v pripade bonusu
+            //var upper = "This is argument".Apply( s => s.ToUpper() );
+            //Console.WriteLine(upper);
         }
 
 

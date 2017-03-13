@@ -44,24 +44,5 @@ namespace Params
         {
             // TODO...
         }
-
-        /// <summary>
-        /// Writes out variable number of logs
-        /// each log consists of log time and
-        /// log specific message
-        /// </summary>
-        /// <param name="logsToWriteOut">
-        /// variable number of EventLogs
-        /// </param>
-        /// <param name="includeDate">
-        /// determines if date should be also
-        /// included in the log output, this
-        /// parameter is optional
-        /// </param>
-        /// 
-        public static void WriteLogsWithDescription(/* TODO - add parameters */)
-        {
-            // TODO...
-        }
     }
 }
