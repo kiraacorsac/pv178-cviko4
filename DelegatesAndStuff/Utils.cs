@@ -41,7 +41,7 @@ namespace ExtensionMethods
 
                 numbersToSort[i] = numbersToSort[j];
 
-                while (i < j && numbersToSort[i] < pivot)
+                while (i < j && numbersToSort[i] <= pivot)
                 {
                     i++;
                 }

@@ -3,3 +3,5 @@
 ################################################################################
 
 *.suo
+/Ukol_OperatorBuisnessMan-Advanced/bin/Debug
+/Ukol_OperatorBuisnessMan-Advanced/obj/Debug

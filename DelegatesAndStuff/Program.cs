@@ -27,7 +27,7 @@ namespace DelegatesAndStuff
             var numbersToSort = new[] { 0, 1, 3, 12, 8, 7, 43, 18, 93, 26, 57 };
 
             //TODO pridajte do funkcie QuickSort delegata ktory vypise parametre na konzolu
-            Utils.QuickSort(numbersToSort, 0, numbersToSort.Length);
+            Utils.QuickSort(numbersToSort, 0, numbersToSort.Length-1);
             Console.WriteLine(string.Join(",", numbersToSort));
             Console.ReadKey();
 
