@@ -5,3 +5,5 @@
 *.suo
 /Ukol_OperatorBuisnessMan-Advanced/bin/Debug
 /Ukol_OperatorBuisnessMan-Advanced/obj/Debug
+/DelegatesAndStuff/obj/Debug
+/ExtensionMethods/ExtensionMethods.csproj.user
